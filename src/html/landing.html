@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page - Tazkia</title>
+  <link href="../css/output.css" rel="stylesheet">
+</head>
+<body class="bg-primary p-5 flex justify-center items-center">
+  <div class="container bg-white max-w-[96%] my-5 mx-5 rounded-2xl">
+
+ <!-- Navbar -->
+ <nav class="bg-white p-4 rounded-t-2xl">
+    <div class="container mx-auto">
+      <div class="flex items-center justify-between py-3 px-6">
+        <div class="flex items-center">
+          <img id="logo" src="../img/flower-pic.svg" alt="Logo" width="40" height="40" class="inline-block align-top">
+          <span class="ml-2 text-xl font-semibold text-secondary">Welcome</span>
+        </div>
+
+        <div class="hidden lg:flex">
+          <ul class="flex space-x-4">
+            <li><a href="./landing.html" class="nav-link active text-secondary hover:text-gray-400">Home</a></li>
+            <li><a href="./about.html" class="nav-link text-secondary hover:text-gray-400">About</a></li>
+          </ul>
+        </div>
+
+        <button class="lg:hidden focus:outline-none">
+          <!-- Hamburger Icon -->
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Row -->
+  <div class="lg:flex md:flex lg:space-x-5 pt-2 pb-4">
+
+    <!-- Col Log In-->
+    <div class="flex min-h-full justify-center py-2 lg:w-6/12 md:w-6/12 md:ml-4">
+
+      <!-- Card -->
+      <div class="border-gray-500 min-w-[75%] shadow-lg rounded-2xl sm:mx-auto sm:w-full sm:max-w-sm py-5">
+        <!-- Card Head -->
+        <div class="px-5 py-2 rounded-t-2xl">
+          <h3 class="text-2xl font-semibold text-grey mb-1 mt-3">Welcome to Our Landing Page</h3>
+          <h5 class="text-grey mb-3">Please log in to access other features</h5>
+        </div>
+            
+        <!-- Card Body -->
+        <div class="px-5">
+          <form class="space-y-4">
+            <div class="space-y-2">
+                <label>Username</label>
+                <input placeholder="Username" id="username" name="username" type="text" required class="block w-full rounded-md border-0 py-1.5 px-3 text-white bg-grey-10 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6">
+            </div>
+            <div class="space-y-3">
+              <label>Password</label>
+              <input placeholder="Password" id="password" name="password" type="password" required class="block w-full rounded-md border-0 py-1.5 px-3 mb-2 text-white bg-grey-10 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6">
+              <input type="checkbox" id="remember-me" class="default:ring-2 mt-3">
+              <label for="remember-me">Show Password</label>
+            </div>
+            <button type="submit" class="flex w-full justify-center rounded-md bg-secondary px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-tertiary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Log In</button>
+          </form>      
+          </div>
+      </div>
+    </div>
+
+            <!-- Col 2 -->
+                
+    <div class="flex min-h-full flex-col justify-center items-center py-12 lg:w-6/12 md:w-6/12 px-6 sm:px-10">
+      <figure>
+        <img id="flower" src="../img/flower-pic.svg" alt="flower" class="max-h-52 max-w-52">
+      </figure>
+      <p id="quote" class="italic text-center">
+        As far as we can discern, the sole purpose of human existence is to kindle
+        a light in the darkness of mere being. <br/> - Carl Gustav Jung
+      </p>
+    </div>
+                      
+  </div>
+
+  <!-- Row -->
+  <footer class="text-center py-2 mb-2 text-secondary">
+    <p>&copy; BTJ Academy</p>
+  </footer>
+
+  </div>
+
+
+  <script>
+    // Toggle mobile menu
+    document.querySelector('button[aria-expanded]').addEventListener('click', function () {
+      const mobileMenu = document.getElementById('mobileMenu');
+      const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+    
+      this.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.classList.toggle('hidden', expanded);
+    });
+
+  </script>
+
+
+</body>
+</html>
