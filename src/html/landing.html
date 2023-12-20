@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Landing Page - Tazkia</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <link href="../css/output.css" rel="stylesheet">
 </head>
 <body class="bg-primary p-5 flex justify-center items-center">
@@ -54,13 +55,16 @@
           <form class="space-y-4">
             <div class="space-y-2">
                 <label>Username</label>
-                <input placeholder="Username" id="username" name="username" type="text" required class="block w-full rounded-md border-0 py-1.5 px-3 text-white bg-grey-10 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6">
-            </div>
+                <input placeholder="Username" id="nama" name="nama" type="text" required class="block w-full rounded-md border-0 py-1.5 px-3 text-black bg-grey-10 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondary sm:text-sm sm:leading-6">
+                <p id="pesanNama" class="pesanError" style="margin-top:5px"></p>
+              </div>
             <div class="space-y-3">
               <label>Password</label>
-              <input placeholder="Password" id="password" name="password" type="password" required class="block w-full rounded-md border-0 py-1.5 px-3 mb-2 text-white bg-grey-10 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6">
-              <input type="checkbox" id="remember-me" class="default:ring-2 mt-3">
-              <label for="remember-me">Show Password</label>
+              <input placeholder="Password" id="password" name="password" type="password" required class="block w-full rounded-md border-0 py-1.5 px-3 mb-2 text-black bg-grey-10 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondary sm:text-sm sm:leading-6">
+              <p id="pesanPassword" class="pesanError text-sm" style="margin-top:5px"></p>
+              <p id="reminderCapslock" class="pesanError text-sm"></p>
+              <input type="checkbox"  id="showPassword" class="default:ring-2 mt-3">
+              <label for="showPassword">Show Password</label>
             </div>
             <button type="submit" class="flex w-full justify-center rounded-md bg-secondary px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-tertiary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Log In</button>
           </form>      
@@ -68,7 +72,7 @@
       </div>
     </div>
 
-            <!-- Col 2 -->
+    <!-- Col 2 -->
                 
     <div class="flex min-h-full flex-col justify-center items-center py-12 lg:w-6/12 md:w-6/12 px-6 sm:px-10">
       <figure>
@@ -102,6 +106,7 @@
 
   </script>
 
+<script src="../javascript/index.js"></script>
 
 </body>
 </html>
